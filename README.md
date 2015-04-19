@@ -1,6 +1,10 @@
 # LPV
 Local Picture Viewer
-Version 3.1.1 - First time for github..<br/>
+version 3.1.4<br/>
+              -support auto update
+
+Version 3.1.1<br/>
+              - First time for github..<br/>
               - For Chrome.<br/>
               - Tampermonkey --> Allow access to file URLs<br/>
               
