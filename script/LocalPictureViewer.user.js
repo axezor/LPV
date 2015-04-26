@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Local Picture Viewer
 // @namespace    http://axezor.blogspot.com/p/lpv.html
-// @version      3.1.4
+// @version      3.1.5
 // @description  enjoy. :P
 // @author       AxEzOr
 // @match        file:///*
@@ -12,18 +12,23 @@
 // @downloadURL     https://raw.githubusercontent.com/axezor/Local-Picture-Viewer/master/script/LocalPictureViewer.user.js
 // ==/UserScript==
 
-var axezorhello, axezorggg = true, axezoraxe = '', axezorair = {}, axezorasb = {}, axezorasg = [];
 
-if (document.getElementById('webpic') === null) {
+if(document.getElementsByTagName('body')[0].innerHTML.indexOf('icon up') !== -1){
+    
+    
+
+    var axezorhello, axezorggg = true, axezoraxe = '', axezorair = {}, axezorasb = {}, axezorasg = [];
+
+    if (document.getElementById('webpic') === null) {
         axezorhello = document.getElementById('table').cloneNode(axezorggg);
         var axezorasd = axezorhello.rows.length - 2;
         var j = 0;
         var c = 2;
         while (j < axezorasd) {
-                axezorhello.rows[c].deleteCell(1);
-                axezorhello.rows[c].deleteCell(1);
-                c++;
-                j++;
+            axezorhello.rows[c].deleteCell(1);
+            axezorhello.rows[c].deleteCell(1);
+            c++;
+            j++;
 
         }
         var axezormak = '';
@@ -32,116 +37,119 @@ if (document.getElementById('webpic') === null) {
         var axezordlk = false;
         var i = 0;
         while (i < axezordll.length) {
-                if (i === 0) {
-                        var axezoropc = axezordll[0];
+            if (i === 0) {
+                var axezoropc = axezordll[0];
 
-                        axezoraxe = axezoropc.substring(axezoropc.indexOf('<a class=\"icon up\"'), axezoropc.indexOf('>['));
-                        axezoraxe += ' style=\" opacity: 0.3;\" onmouseout=\"this.style.opacity=0.3;\" title=\"Upper\"  onmouseover=\"this.style.opacity=1;\"></a>';
+                axezoraxe = axezoropc.substring(axezoropc.indexOf('<a class=\"icon up\"'), axezoropc.indexOf('>['));
+                axezoraxe += ' style=\" opacity: 0.3;\" onmouseout=\"this.style.opacity=0.3;\" title=\"Upper\"  onmouseover=\"this.style.opacity=1;\"></a>';
 
-                        axezoropc = axezoropc.substring(axezoropc.indexOf('<a class=\"icon up\"'), axezoropc.indexOf(']</a>') + 5);
-
-
-
-                        axezormak = '<center><button onclick=\"hidepic()\" class=\"myButton\" title=\"HIDE\">&nbsp;&nbsp;HidE&nbsp;&nbsp;</button></center><a href=\"http://axezor.blogspot.com/p/gen-web-pic.html\" id=\"pix\" target=\"_blank\" style=\"color: #FF7070;\">AxEzOr</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + axezoropc + '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-
-                        var axezorops = document.createElement('script');
-
-
-                        var t = document.createTextNode('var abc=\"\"; function hidepic(){if(abc.length==0){abc=document.getElementById(\"webpic\").innerHTML; document.getElementById(\"webpic\").innerHTML = \"<center><button onclick=\'hidepic()\' class=\'myButton\' title=\'SHOW\'>&nbsp;&nbsp;ShoW&nbsp;&nbsp;</button></center>\";}else{document.getElementById(\"webpic\").innerHTML=abc;abc=\"\";}}');
-                        axezorops.appendChild(t);
-
-
-                        document.getElementsByTagName('head')[0].appendChild(axezorops);
-
-
-                        var axezorkokk = ' .myButton {        -moz-box-shadow:inset 0px 39px 0px -24px #e67a73;        -webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;        box-shadow:inset 0px 39px 0px -24px #e67a73;        background-color:#e4685d;        -moz-border-radius:4px;        -webkit-border-radius:4px;        border-radius:4px;        border:1px solid #ffffff;        display:inline-block;        cursor:pointer;        color:#ffffff;        font-family:arial;        font-size:15px;        padding:6px 15px;        text-decoration:none;        text-shadow:0px 1px 0px #b23e35;} .myButton:hover {        background-color:#eb675e;} .myButton:active {        position:relative;        top:1px;} #banner_floating_right_bottom {display:block;position: fixed;width: 160px; bottom: 20px; right:-32px; z-index: 9999999999;}',
-                                axezorkok = document.head || document.getElementsByTagName('head')[0],
-                                axezoryui = document.createElement('style');
-
-                        axezoryui.type = 'text/css';
-                        if (axezoryui.styleSheet) {
-                                axezoryui.styleSheet.cssText = axezorkokk;
-                        } else {
-                                axezoryui.appendChild(document.createTextNode(axezorkokk));
-                        }
-
-                        axezorkok.appendChild(axezoryui);
+                axezoropc = axezoropc.substring(axezoropc.indexOf('<a class=\"icon up\"'), axezoropc.indexOf(']</a>') + 5);
 
 
 
+                axezormak = '<center><button onclick=\"hidepic()\" class=\"myButton\" title=\"HIDE\">&nbsp;&nbsp;HidE&nbsp;&nbsp;</button></center><a href=\"http://axezor.blogspot.com/p/gen-web-pic.html\" id=\"pix\" target=\"_blank\" style=\"color: #FF7070;\">AxEzOr</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + axezoropc + '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+
+                var axezorops = document.createElement('script');
+
+
+                var t = document.createTextNode('var abc=\"\"; function hidepic(){if(abc.length==0){abc=document.getElementById(\"webpic\").innerHTML; document.getElementById(\"webpic\").innerHTML = \"<center><button onclick=\'hidepic()\' class=\'myButton\' title=\'SHOW\'>&nbsp;&nbsp;ShoW&nbsp;&nbsp;</button></center>\";}else{document.getElementById(\"webpic\").innerHTML=abc;abc=\"\";}}');
+                axezorops.appendChild(t);
+
+
+                document.getElementsByTagName('head')[0].appendChild(axezorops);
+
+
+                var axezorkokk = ' .myButton {        -moz-box-shadow:inset 0px 39px 0px -24px #e67a73;        -webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;        box-shadow:inset 0px 39px 0px -24px #e67a73;        background-color:#e4685d;        -moz-border-radius:4px;        -webkit-border-radius:4px;        border-radius:4px;        border:1px solid #ffffff;        display:inline-block;        cursor:pointer;        color:#ffffff;        font-family:arial;        font-size:15px;        padding:6px 15px;        text-decoration:none;        text-shadow:0px 1px 0px #b23e35;} .myButton:hover {        background-color:#eb675e;} .myButton:active {        position:relative;        top:1px;} #banner_floating_right_bottom {display:block;position: fixed;width: 160px; bottom: 20px; right:-32px; z-index: 9999999999;}',
+                    axezorkok = document.head || document.getElementsByTagName('head')[0],
+                    axezoryui = document.createElement('style');
+
+                axezoryui.type = 'text/css';
+                if (axezoryui.styleSheet) {
+                    axezoryui.styleSheet.cssText = axezorkokk;
                 } else {
-
-                        var axezorzzx = axezordll[i].toLowerCase();
-                        if (axezorzzx.match(/\.(jpg|jpeg|png|gif|exif|tiff|rif|bmp|dib|webp)/)) {
-
-                                axezordll[i] = axezordll[i].replace('draggable=\"true\" href', '<img src');
-
-                                if (axezordll[i].indexOf('icon dir') != -1) {
-                                        axezordll[i] = axezordll[i].replace('a><', 'img><br></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<');
-
-                                } else {
-                                        axezordll[i] = axezordll[i].replace('a><', 'img><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<');
-
-                                }
-
-                                var axezorzxc = axezordll[i].substring(0, axezordll[i].indexOf('</img>'));
-                                axezorzxc = axezorzxc.substring(axezorzxc.lastIndexOf('/') + 1, axezorzxc.lastIndexOf('.'));
-
-                                axezorasb[i] = axezorzxc;
-                                axezorasg.push(axezorzxc);
-                                axezorair[axezorzxc] = axezordll[i];
-                                axezordlk = axezorggg;
-
-                        }
+                    axezoryui.appendChild(document.createTextNode(axezorkokk));
                 }
-                i++;
+
+                axezorkok.appendChild(axezoryui);
+
+
+
+            } else {
+
+                var axezorzzx = axezordll[i].toLowerCase();
+                if (axezorzzx.match(/\.(jpg|jpeg|png|gif|exif|tiff|rif|bmp|dib|webp)/)) {
+
+                    axezordll[i] = axezordll[i].replace('draggable=\"true\" href', '<img src');
+
+                    if (axezordll[i].indexOf('icon dir') != -1) {
+                        axezordll[i] = axezordll[i].replace('a><', 'img><br></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<');
+
+                    } else {
+                        axezordll[i] = axezordll[i].replace('a><', 'img><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<');
+
+                    }
+
+                    var axezorzxc = axezordll[i].substring(0, axezordll[i].indexOf('</img>'));
+                    axezorzxc = axezorzxc.substring(axezorzxc.lastIndexOf('/') + 1, axezorzxc.lastIndexOf('.'));
+
+                    axezorasb[i] = axezorzxc;
+                    axezorasg.push(axezorzxc);
+                    axezorair[axezorzxc] = axezordll[i];
+                    axezordlk = axezorggg;
+
+                }
+            }
+            i++;
 
 
         }
-    //console.log(axezorasg);
-    axezorasg.sort(axeccp);
+        //console.log(axezorasg);
+        axezorasg.sort(axeccp);
 
         if (axezormak.indexOf('pix') != -1) {
 
-                for (var z = 0; z < (i - 1); z++) {
-                    //console.log(axezorair[axezorasg[z]]);
-                        axezormak += axezorair[axezorasg[z]];
-                }
+            for (var z = 0; z < (i - 1); z++) {
+                //console.log(axezorair[axezorasg[z]]);
+                axezormak += axezorair[axezorasg[z]];
+            }
         }
 
 
         if (axezordlk) {
-                header.innerHTML = header.innerHTML + '<br/><br/><div id=\"divtop\"></div><div id=\"webpic\"></div><div id=\"banner_floating_right_bottom\" style=\"text-align:center;\">' + axezoraxe + '<br/><input action=\"action\" type=\"button\" style=\" opacity: 0.3;\" class=\"myButton\" value=\"Back\" onclick=\"history.go(-1);\" onmouseout=\"this.style.opacity=0.3;\"  onmouseover=\"this.style.opacity=1;\" title=\"Back\"></div>';
+            header.innerHTML = header.innerHTML + '<br/><br/><div id=\"divtop\"></div><div id=\"webpic\"></div><div id=\"banner_floating_right_bottom\" style=\"text-align:center;\">' + axezoraxe + '<br/><input action=\"action\" type=\"button\" style=\" opacity: 0.3;\" class=\"myButton\" value=\"Back\" onclick=\"history.go(-1);\" onmouseout=\"this.style.opacity=0.3;\"  onmouseover=\"this.style.opacity=1;\" title=\"Back\"></div>';
 
-                if (axezormak.indexOf('pix') != -1) {
-                        document.getElementById('webpic').innerHTML = document.getElementById('webpic').innerHTML + axezormak;
-                        document.body.style.backgroundColor = 'black';
-                        document.body.style.color = 'wheat';
-                }
+            if (axezormak.indexOf('pix') != -1) {
+                document.getElementById('webpic').innerHTML = document.getElementById('webpic').innerHTML + axezormak;
+                document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'wheat';
+            }
 
 
         }
-}
+    }
 
-function axeccp(a, b) {
+    function axeccp(a, b) {
         var ax = [],
-                bx = [];
+            bx = [];
 
         a.replace(/(\d+)|(\D+)/g, function(_, $1, $2) {
-                ax.push([$1 || Infinity, $2 || ""])
+            ax.push([$1 || Infinity, $2 || ""])
         });
         b.replace(/(\d+)|(\D+)/g, function(_, $1, $2) {
-                bx.push([$1 || Infinity, $2 || ""])
+            bx.push([$1 || Infinity, $2 || ""])
         });
 
         while (ax.length && bx.length) {
-                var an = ax.shift();
-                var bn = bx.shift();
-                var nn = (an[0] - bn[0]) || an[1].localeCompare(bn[1]);
-                if (nn) return nn;
+            var an = ax.shift();
+            var bn = bx.shift();
+            var nn = (an[0] - bn[0]) || an[1].localeCompare(bn[1]);
+            if (nn) return nn;
         }
 
         return ax.length - bx.length;
+    }
+
+    
 }
 
 
