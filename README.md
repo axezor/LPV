@@ -16,4 +16,4 @@ The script works in:
 <b>Chrome</b> (install the <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en" target="_blank">Tampermonkey</a> extension first)
 <br/>
 <br/>
-Main Blog --->   <a href="https://axezor.blogspot.com/lpv" target="_blank">axezor.blogspot.com/lpv</a>
+Main Blog --->   <a href="http://axezor.blogspot.com/p/lpv.html" target="_blank">axezor.blogspot.com/p/lpv.html</a>
