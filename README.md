@@ -1,7 +1,7 @@
 # LPV
-Local Picture Viewer
+Local Picture Viewer<br/>
 version 3.1.5<br/>
-              -Skip if stay on file page , can't gen viewer.
+              -Skip if stay on file page , can't gen viewer.<br/>
 version 3.1.4<br/>
               -support auto update
 
