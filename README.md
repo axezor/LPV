@@ -1,5 +1,7 @@
 # LPV
 Local Picture Viewer
+version 3.1.5<br/>
+              -Skip if stay on file page , can't gen viewer.
 version 3.1.4<br/>
               -support auto update
 
@@ -12,3 +14,6 @@ Version 3.1.1<br/>
 The script works in:
 <br/>
 <b>Chrome</b> (install the <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en" target="_blank">Tampermonkey</a> extension first)
+<br/>
+<br/>
+Main Blog --->  axezor.blogspot.com/lpv
