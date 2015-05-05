@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Local Picture Viewer
 // @namespace    http://axezor.blogspot.com/p/lpv.html
-// @version      3.1.5
+// @version      3.1.6
 // @description  enjoy. :P
 // @author       AxEzOr
 // @match        file:///*
