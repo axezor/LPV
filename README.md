@@ -1,5 +1,7 @@
 # LPV
-Local Picture Viewer<br/>
+Local Picture Viewer<br/><br/>
+version 3.1.6<br/>
+              -Add FullScreen btn.<br/>
 version 3.1.5<br/>
               -Skip file page , don't gen local picture viewer.<br/>
 version 3.1.4<br/>
