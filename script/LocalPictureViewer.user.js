@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Local Picture Viewer
 // @namespace    http://axezor.blogspot.com/p/lpv.html
-// @version      3.1.5
+// @version      3.1.6
 // @description  enjoy. :P
 // @author       AxEzOr
 // @match        file:///*
@@ -52,14 +52,14 @@ if(document.getElementsByTagName('body')[0].innerHTML.indexOf('icon up') !== -1)
                 var axezorops = document.createElement('script');
 
 
-                var t = document.createTextNode('var abc=\"\"; function hidepic(){if(abc.length==0){abc=document.getElementById(\"webpic\").innerHTML; document.getElementById(\"webpic\").innerHTML = \"<center><button onclick=\'hidepic()\' class=\'myButton\' title=\'SHOW\'>&nbsp;&nbsp;ShoW&nbsp;&nbsp;</button></center>\";}else{document.getElementById(\"webpic\").innerHTML=abc;abc=\"\";}}');
+                var t = document.createTextNode('var abc=\"\"; function hidepic(){if(abc.length==0){abc=document.getElementById(\"webpic\").innerHTML; document.getElementById(\"webpic\").innerHTML = \"<center><button onclick=\'hidepic()\' class=\'myButton\' title=\'SHOW\'>&nbsp;&nbsp;ShoW&nbsp;&nbsp;</button></center>\";}else{document.getElementById(\"webpic\").innerHTML=abc;abc=\"\";}}     function toggleFullScreen() {  if ((document.fullScreenElement && document.fullScreenElement !== null) ||       (!document.mozFullScreen && !document.webkitIsFullScreen)) {    if (document.documentElement.requestFullScreen) {        document.documentElement.requestFullScreen();      } else if (document.documentElement.mozRequestFullScreen) {        document.documentElement.mozRequestFullScreen();      } else if (document.documentElement.webkitRequestFullScreen) {        document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);      }    } else {      if (document.cancelFullScreen) {        document.cancelFullScreen();      } else if (document.mozCancelFullScreen) {        document.mozCancelFullScreen();      } else if (document.webkitCancelFullScreen) {        document.webkitCancelFullScreen();      }    }  }   ');
                 axezorops.appendChild(t);
 
 
                 document.getElementsByTagName('head')[0].appendChild(axezorops);
 
 
-                var axezorkokk = ' .myButton {        -moz-box-shadow:inset 0px 39px 0px -24px #e67a73;        -webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;        box-shadow:inset 0px 39px 0px -24px #e67a73;        background-color:#e4685d;        -moz-border-radius:4px;        -webkit-border-radius:4px;        border-radius:4px;        border:1px solid #ffffff;        display:inline-block;        cursor:pointer;        color:#ffffff;        font-family:arial;        font-size:15px;        padding:6px 15px;        text-decoration:none;        text-shadow:0px 1px 0px #b23e35;} .myButton:hover {        background-color:#eb675e;} .myButton:active {        position:relative;        top:1px;} #banner_floating_right_bottom {display:block;position: fixed;width: 160px; bottom: 20px; right:-32px; z-index: 9999999999;}',
+                var axezorkokk = ' .myButton {        -moz-box-shadow:inset 0px 39px 0px -24px #e67a73;        -webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;        box-shadow:inset 0px 39px 0px -24px #e67a73;        background-color:#e4685d;        -moz-border-radius:4px;        -webkit-border-radius:4px;        border-radius:4px;        border:1px solid #ffffff;        display:inline-block;        cursor:pointer;        color:#ffffff;        font-family:arial;        font-size:15px;        padding:6px 15px;        text-decoration:none;        text-shadow:0px 1px 0px #b23e35;} .myButton:hover {        background-color:#eb675e;} .myButton:active {        position:relative;        top:1px;} #banner_floating_right_bottom {display:block;position: fixed;width: 160px; bottom: 20px; right:-32px; z-index: 9999999999;} .imgx {	width:            24px;	height:           24px;	background-image: url(\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAPUExURevi4vXx8Xs7PlwNEf///+9hCrkAAAAFdFJOU/////8A+7YOUwAAAHBJREFUeNqUkkESwCAIAyHm/29ui4joWFs5ITvEgEqpwQgvyAZwEV+gNkMVTTcDKOlkD7qRLEUmUIAyA0irWRrglm8qlgbQJ/GB/RggdSTQ/VRv6XJ0V8Bs922OYXIz40AY3n4ucbX20xc8/CWXAAMAhVQHRQAZfi0AAAAASUVORK5CYII=\');}   ',
                     axezorkok = document.head || document.getElementsByTagName('head')[0],
                     axezoryui = document.createElement('style');
 
@@ -116,7 +116,7 @@ if(document.getElementsByTagName('body')[0].innerHTML.indexOf('icon up') !== -1)
 
 
         if (axezordlk) {
-            header.innerHTML = header.innerHTML + '<br/><br/><div id=\"divtop\"></div><div id=\"webpic\"></div><div id=\"banner_floating_right_bottom\" style=\"text-align:center;\">' + axezoraxe + '<br/><input action=\"action\" type=\"button\" style=\" opacity: 0.3;\" class=\"myButton\" value=\"Back\" onclick=\"history.go(-1);\" onmouseout=\"this.style.opacity=0.3;\"  onmouseover=\"this.style.opacity=1;\" title=\"Back\"></div>';
+            header.innerHTML = header.innerHTML + '<br/><br/><div id=\"divtop\"></div><div id=\"webpic\"></div><div id=\"banner_floating_right_bottom\" style=\"text-align:center;\">   <img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAPUExURevi4vXx8Xs7PlwNEf///+9hCrkAAAAFdFJOU/////8A+7YOUwAAAHBJREFUeNqUkkESwCAIAyHm/29ui4joWFs5ITvEgEqpwQgvyAZwEV+gNkMVTTcDKOlkD7qRLEUmUIAyA0irWRrglm8qlgbQJ/GB/RggdSTQ/VRv6XJ0V8Bs922OYXIz40AY3n4ucbX20xc8/CWXAAMAhVQHRQAZfi0AAAAASUVORK5CYII=" alt="Pree Key F11\"  title=\"Full Screen Recommend Pree Key F11\" onclick=\"toggleFullScreen()\" onmouseout=\"this.style.opacity=0.3;\"  onmouseover=\"this.style.opacity=1;\" style=\" opacity: 0.3; background-color: white;\" />  <br/><br/><br/>' + axezoraxe + '<br/><input action=\"action\" type=\"button\" style=\" opacity: 0.3;\" class=\"myButton\" value=\"Back\" onclick=\"history.go(-1);\" onmouseout=\"this.style.opacity=0.3;\"  onmouseover=\"this.style.opacity=1;\" title=\"Back\"></div>';
 
             if (axezormak.indexOf('pix') != -1) {
                 document.getElementById('webpic').innerHTML = document.getElementById('webpic').innerHTML + axezormak;
