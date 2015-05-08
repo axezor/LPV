@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Local Picture Viewer
 // @namespace    http://axezor.blogspot.com/p/lpv.html
-// @version      3.1.6
+// @version      3.1.7
 // @description  enjoy. :P
 // @author       AxEzOr
 // @match        file:///*
@@ -12,14 +12,76 @@
 // @downloadURL     https://raw.githubusercontent.com/axezor/Local-Picture-Viewer/master/script/LocalPictureViewer.user.js
 // ==/UserScript==
 
+var abc = "";
+
+function hidepic() {
+	if (abc.length === 0) {
+		abc = document.getElementById("webpic").innerHTML;
+		document.getElementById("webpic").innerHTML = "<center><button id='btnHidepic2' class='myButton' title='SHOW'>&nbsp;&nbsp;ShoW&nbsp;&nbsp;</button></center>";
+        document.getElementById('btnHidepic2').addEventListener('click', function (){hidepic();});
+	} else {
+		document.getElementById("webpic").innerHTML = abc;
+        document.getElementById('btnHidepic').addEventListener('click', function (){hidepic();});
+		abc = "";
+	}
+}
+
+
+function toggleFullScreen() {
+
+	if ((document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+		if (document.documentElement.requestFullScreen) {
+			document.documentElement.requestFullScreen();
+		} else if (document.documentElement.mozRequestFullScreen) {
+			document.documentElement.mozRequestFullScreen();
+		} else if (document.documentElement.webkitRequestFullScreen) {
+
+			document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+		}
+	} else {
+		if (document.cancelFullScreen) {
+			document.cancelFullScreen();
+		} else if (document.mozCancelFullScreen) {
+			document.mozCancelFullScreen();
+		} else if (document.webkitCancelFullScreen) {
+			document.webkitCancelFullScreen();
+		}
+	}
+}
+
+    function axeccp(a, b) {
+        var ax = [],
+            bx = [];
+
+        a.replace(/(\d+)|(\D+)/g, function(_, $1, $2) {
+            ax.push([$1 || Infinity, $2 || ""])
+        });
+        b.replace(/(\d+)|(\D+)/g, function(_, $1, $2) {
+            bx.push([$1 || Infinity, $2 || ""])
+        });
+
+        while (ax.length && bx.length) {
+            var an = ax.shift();
+            var bn = bx.shift();
+            var nn = (an[0] - bn[0]) || an[1].localeCompare(bn[1]);
+            if (nn) return nn;
+        }
+
+        return ax.length - bx.length;
+    }
+
+
+
 
 if(document.getElementsByTagName('body')[0].innerHTML.indexOf('icon up') !== -1){
     
-    
-
     var axezorhello, axezorggg = true, axezoraxe = '', axezorair = {}, axezorasb = {}, axezorasg = [];
 
     if (document.getElementById('webpic') === null) {
+        
+        
+   
+        
         axezorhello = document.getElementById('table').cloneNode(axezorggg);
         var axezorasd = axezorhello.rows.length - 2;
         var j = 0;
@@ -46,17 +108,17 @@ if(document.getElementsByTagName('body')[0].innerHTML.indexOf('icon up') !== -1)
                 axezoropc = axezoropc.substring(axezoropc.indexOf('<a class=\"icon up\"'), axezoropc.indexOf(']</a>') + 5);
 
 
-
-                axezormak = '<center><button onclick=\"hidepic()\" class=\"myButton\" title=\"HIDE\">&nbsp;&nbsp;HidE&nbsp;&nbsp;</button></center><a href=\"http://axezor.blogspot.com/p/gen-web-pic.html\" id=\"pix\" target=\"_blank\" style=\"color: #FF7070;\">AxEzOr</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + axezoropc + '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+                //onclick=\"hidepic()\"
+                axezormak = '<center><button id=\"btnHidepic\" class=\"myButton\" title=\"HIDE\">&nbsp;&nbsp;HidE&nbsp;&nbsp;</button></center><a href=\"http://axezor.blogspot.com/p/gen-web-pic.html\" id=\"pix\" target=\"_blank\" style=\"color: #FF7070;\">AxEzOr</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + axezoropc + '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 
                 var axezorops = document.createElement('script');
 
 
-                var t = document.createTextNode('var abc=\"\"; function hidepic(){if(abc.length==0){abc=document.getElementById(\"webpic\").innerHTML; document.getElementById(\"webpic\").innerHTML = \"<center><button onclick=\'hidepic()\' class=\'myButton\' title=\'SHOW\'>&nbsp;&nbsp;ShoW&nbsp;&nbsp;</button></center>\";}else{document.getElementById(\"webpic\").innerHTML=abc;abc=\"\";}}     function toggleFullScreen() {  if ((document.fullScreenElement && document.fullScreenElement !== null) ||       (!document.mozFullScreen && !document.webkitIsFullScreen)) {    if (document.documentElement.requestFullScreen) {        document.documentElement.requestFullScreen();      } else if (document.documentElement.mozRequestFullScreen) {        document.documentElement.mozRequestFullScreen();      } else if (document.documentElement.webkitRequestFullScreen) {        document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);      }    } else {      if (document.cancelFullScreen) {        document.cancelFullScreen();      } else if (document.mozCancelFullScreen) {        document.mozCancelFullScreen();      } else if (document.webkitCancelFullScreen) {        document.webkitCancelFullScreen();      }    }  }   ');
-                axezorops.appendChild(t);
+                //var t = document.createTextNode('var abc=\"\"; function hidepic(){if(abc.length==0){abc=document.getElementById(\"webpic\").innerHTML; document.getElementById(\"webpic\").innerHTML = \"<center><button onclick=\'hidepic()\' class=\'myButton\' title=\'SHOW\'>&nbsp;&nbsp;ShoW&nbsp;&nbsp;</button></center>\";}else{document.getElementById(\"webpic\").innerHTML=abc;abc=\"\";}}     function toggleFullScreen() {  if ((document.fullScreenElement && document.fullScreenElement !== null) ||       (!document.mozFullScreen && !document.webkitIsFullScreen)) {    if (document.documentElement.requestFullScreen) {        document.documentElement.requestFullScreen();      } else if (document.documentElement.mozRequestFullScreen) {        document.documentElement.mozRequestFullScreen();      } else if (document.documentElement.webkitRequestFullScreen) {        document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);      }    } else {      if (document.cancelFullScreen) {        document.cancelFullScreen();      } else if (document.mozCancelFullScreen) {        document.mozCancelFullScreen();      } else if (document.webkitCancelFullScreen) {        document.webkitCancelFullScreen();      }    }  }   ');
+                //axezorops.appendChild(t);
 
 
-                document.getElementsByTagName('head')[0].appendChild(axezorops);
+                //document.getElementsByTagName('head')[0].appendChild(axezorops);
 
 
                 var axezorkokk = ' .myButton {        -moz-box-shadow:inset 0px 39px 0px -24px #e67a73;        -webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;        box-shadow:inset 0px 39px 0px -24px #e67a73;        background-color:#e4685d;        -moz-border-radius:4px;        -webkit-border-radius:4px;        border-radius:4px;        border:1px solid #ffffff;        display:inline-block;        cursor:pointer;        color:#ffffff;        font-family:arial;        font-size:15px;        padding:6px 15px;        text-decoration:none;        text-shadow:0px 1px 0px #b23e35;} .myButton:hover {        background-color:#eb675e;} .myButton:active {        position:relative;        top:1px;} #banner_floating_right_bottom {display:block;position: fixed;width: 160px; bottom: 20px; right:-32px; z-index: 9999999999;} .imgx {	width:            24px;	height:           24px;	background-image: url(\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAPUExURevi4vXx8Xs7PlwNEf///+9hCrkAAAAFdFJOU/////8A+7YOUwAAAHBJREFUeNqUkkESwCAIAyHm/29ui4joWFs5ITvEgEqpwQgvyAZwEV+gNkMVTTcDKOlkD7qRLEUmUIAyA0irWRrglm8qlgbQJ/GB/RggdSTQ/VRv6XJ0V8Bs922OYXIz40AY3n4ucbX20xc8/CWXAAMAhVQHRQAZfi0AAAAASUVORK5CYII=\');}   ',
@@ -122,32 +184,18 @@ if(document.getElementsByTagName('body')[0].innerHTML.indexOf('icon up') !== -1)
                 document.getElementById('webpic').innerHTML = document.getElementById('webpic').innerHTML + axezormak;
                 document.body.style.backgroundColor = 'black';
                 document.body.style.color = 'wheat';
+                
+                
+                document.getElementById('btnHidepic').addEventListener('click', function (){hidepic();});
+                
+                
             }
 
 
         }
     }
 
-    function axeccp(a, b) {
-        var ax = [],
-            bx = [];
 
-        a.replace(/(\d+)|(\D+)/g, function(_, $1, $2) {
-            ax.push([$1 || Infinity, $2 || ""])
-        });
-        b.replace(/(\d+)|(\D+)/g, function(_, $1, $2) {
-            bx.push([$1 || Infinity, $2 || ""])
-        });
-
-        while (ax.length && bx.length) {
-            var an = ax.shift();
-            var bn = bx.shift();
-            var nn = (an[0] - bn[0]) || an[1].localeCompare(bn[1]);
-            if (nn) return nn;
-        }
-
-        return ax.length - bx.length;
-    }
 
     
 }
