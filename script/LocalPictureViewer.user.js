@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Local Picture Viewer
 // @namespace    http://axezor.blogspot.com/p/lpv.html
-// @version      3.1.7
+// @version      3.1.8
 // @description  enjoy. :P
 // @author       AxEzOr
 // @match        file:///*
@@ -178,7 +178,7 @@ if(document.getElementsByTagName('body')[0].innerHTML.indexOf('icon up') !== -1)
 
 
         if (axezordlk) {
-            header.innerHTML = header.innerHTML + '<br/><br/><div id=\"divtop\"></div><div id=\"webpic\"></div><div id=\"banner_floating_right_bottom\" style=\"text-align:center;\">   <img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAPUExURevi4vXx8Xs7PlwNEf///+9hCrkAAAAFdFJOU/////8A+7YOUwAAAHBJREFUeNqUkkESwCAIAyHm/29ui4joWFs5ITvEgEqpwQgvyAZwEV+gNkMVTTcDKOlkD7qRLEUmUIAyA0irWRrglm8qlgbQJ/GB/RggdSTQ/VRv6XJ0V8Bs922OYXIz40AY3n4ucbX20xc8/CWXAAMAhVQHRQAZfi0AAAAASUVORK5CYII=" alt="Pree Key F11\"  title=\"Full Screen Recommend Pree Key F11\" onclick=\"toggleFullScreen()\" onmouseout=\"this.style.opacity=0.3;\"  onmouseover=\"this.style.opacity=1;\" style=\" opacity: 0.3; background-color: white;\" />  <br/><br/><br/>' + axezoraxe + '<br/><input action=\"action\" type=\"button\" style=\" opacity: 0.3;\" class=\"myButton\" value=\"Back\" onclick=\"history.go(-1);\" onmouseout=\"this.style.opacity=0.3;\"  onmouseover=\"this.style.opacity=1;\" title=\"Back\"></div>';
+            header.innerHTML = header.innerHTML + '<br/><br/><div id=\"divtop\"></div><div id=\"webpic\"></div><div id=\"banner_floating_right_bottom\" style=\"text-align:center;\">   <img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAPUExURevi4vXx8Xs7PlwNEf///+9hCrkAAAAFdFJOU/////8A+7YOUwAAAHBJREFUeNqUkkESwCAIAyHm/29ui4joWFs5ITvEgEqpwQgvyAZwEV+gNkMVTTcDKOlkD7qRLEUmUIAyA0irWRrglm8qlgbQJ/GB/RggdSTQ/VRv6XJ0V8Bs922OYXIz40AY3n4ucbX20xc8/CWXAAMAhVQHRQAZfi0AAAAASUVORK5CYII=" alt="Pree Key F11\"  title=\"Full Screen Recommend Pree Key F11\" onmouseout=\"this.style.opacity=0.3;\"  onmouseover=\"this.style.opacity=1;\" style=\" opacity: 0.3; background-color: white;\" />  <br/><br/><br/>' + axezoraxe + '<br/><input action=\"action\" type=\"button\" style=\" opacity: 0.3;\" class=\"myButton\" value=\"Back\" onclick=\"history.go(-1);\" onmouseout=\"this.style.opacity=0.3;\"  onmouseover=\"this.style.opacity=1;\" title=\"Back\"></div>';
 
             if (axezormak.indexOf('pix') != -1) {
                 document.getElementById('webpic').innerHTML = document.getElementById('webpic').innerHTML + axezormak;
@@ -187,6 +187,7 @@ if(document.getElementsByTagName('body')[0].innerHTML.indexOf('icon up') !== -1)
                 
                 
                 document.getElementById('btnHidepic').addEventListener('click', function (){hidepic();});
+                document.getElementById('banner_floating_right_bottom').addEventListener('click', function (){toggleFullScreen();});
                 
                 
             }
