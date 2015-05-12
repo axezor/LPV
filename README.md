@@ -1,6 +1,6 @@
 # LPV
 Local Picture Viewer<br/><br/>
-version 3.1.7<br/>
+version 3.1.8<br/>
               -Add function by EventListener.<br/>
 version 3.1.6<br/>
               -Add FullScreen btn.<br/>
