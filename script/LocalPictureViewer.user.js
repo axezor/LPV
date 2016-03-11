@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Local Picture Viewer
 // @namespace    http://axezor.blogspot.com/p/lpv.html
-// @version      3.1.9
+// @version      3.1.10
 // @description  enjoy. :P
 // @author       AxEzOr
 // @match        file:///*
@@ -80,9 +80,13 @@ if(document.getElementsByTagName('body')[0].innerHTML.indexOf('icon up') !== -1)
     if (document.getElementById('webpic') === null) {
         
         
-   
+	   if(document.getElementById('table')){
+            	axezorhello = document.getElementById('table').cloneNode(axezorggg);
+            }else if(document.getElementsByTagName('table').length>0){
+            	axezorhello = document.getElementsByTagName('table')[0].cloneNode(axezorggg);
+            }
         
-        axezorhello = document.getElementById('table').cloneNode(axezorggg);
+        
         var axezorasd = axezorhello.rows.length - 2;
         var j = 0;
         var c = 2;
